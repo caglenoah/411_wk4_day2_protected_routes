@@ -22,8 +22,14 @@ const Login = () => {
 
   const login = (e) => {
     e.preventDefault();
-    // set cookie here
+
+    // check db and verify uname and pwd hash
+    // if true, generate the signed token
+    // set cookie here only if I have a signed toekn
     // set loggedIn = true and max-age = 60*1000 (one minute)
+
+document.cookie = "loggedIn=true;max-age=60*1000" // we are calling the browser method here so we do not need to import it
+
 
     navigate("/");
   };
